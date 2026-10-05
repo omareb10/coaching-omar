@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Omar Elhadri | Coaching Nutricional 1:1</title>
+<meta name="description" content="Coaching nutricional 1:1 online. Plan de alimentación a medida, macros calculados para ti y revisiones semanales por WhatsApp. Programa de 3 meses." />
+<meta name="theme-color" content="#0a0a0a" />
+<meta property="og:title" content="Omar Elhadri | Coaching Nutricional 1:1" />
+<meta property="og:description" content="Plan de alimentación a medida y seguimiento semanal. Programa de 3 meses." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23c6f432'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%230a0a0a' font-family='Arial' font-weight='900'>O</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --acc:#c6f432; --acc-ink:#0a0a0a;
+  --bg:#0a0a0a; --bg2:#121212; --card:#171717; --line:#262626;
+  --ink:#fafafa; --text:#c7c7c7; --muted:#8a8a8a;
+  --r:18px; --h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--h)}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--ink);line-height:1.05;margin:0 0 .5em;letter-spacing:-.03em}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:900}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:900}
+h3{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+p{margin:0 0 1rem}
+svg{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.narrow{width:min(800px,100% - 40px);margin-inline:auto}
+.hl{color:var(--acc)}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:800;font-size:1rem;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-acc{background:var(--acc);color:var(--acc-ink);box-shadow:0 12px 30px -12px rgba(198,244,50,.6)}
+.btn-acc:hover{background:#d4ff4a}
+.btn-line{border-color:#3a3a3a;color:var(--ink)}
+.btn-line:hover{border-color:var(--ink)}
+.btn-lg{padding:1.1rem 1.8rem;font-size:1.05rem}
+.btn-sm{padding:.6rem 1.15rem;font-size:.9rem}
+.btn-block{width:100%}
+
+/* Header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;height:var(--h);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.hdr.scrolled{background:rgba(10,10,10,.85);backdrop-filter:blur(14px);border-color:var(--line)}
+.hdr .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:900;color:var(--ink);font-size:1.05rem;letter-spacing:-.02em}
+.logo b{width:38px;height:38px;border-radius:11px;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;font-size:1.1rem}
+.logo small{display:block;font-weight:600;color:var(--muted);font-size:.72rem;letter-spacing:.02em;margin-top:-3px}
+.nav{display:flex;align-items:center;gap:1.8rem}
+.nav a:not(.btn){font-weight:600;font-size:.94rem;color:var(--text)}
+.nav a:not(.btn):hover{color:var(--ink)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;padding:10px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.3s}
+.hdr.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hdr.open .burger span:nth-child(2){opacity:0}
+.hdr.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;padding:calc(var(--h) + 70px) 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:760px;height:760px;right:-220px;top:-200px;background:radial-gradient(circle,rgba(198,244,50,.18),transparent 65%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;opacity:.07;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 70% 30%,#000,transparent 70%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.tag{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .9rem;border-radius:999px;border:1px solid #2f2f2f;background:#141414;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:1.5rem}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(198,244,50,.2)}
+.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:560px;color:#b5b5b5}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin:2rem 0 1.6rem}
+.mini{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-size:.93rem;color:#bdbdbd}
+.mini li{display:flex;gap:.45rem;align-items:center}
+.mini svg{color:var(--acc)}
+
+/* Tarjeta plan (visual del hero) */
+.plan-ui{background:linear-gradient(180deg,#1a1a1a,#121212);border:1px solid #2a2a2a;border-radius:24px;padding:1.6rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transform:rotate(1.5deg)}
+.plan-ui header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+.plan-ui header strong{color:var(--ink);font-size:1rem}
+.chip{font-size:.72rem;font-weight:800;padding:.25rem .6rem;border-radius:999px;background:rgba(198,244,50,.14);color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.kcal{display:flex;align-items:baseline;gap:.4rem;margin-bottom:1.2rem}
+.kcal b{font-size:2.6rem;font-weight:900;color:var(--ink);letter-spacing:-.03em}
+.kcal span{color:var(--muted);font-weight:600}
+.macro{margin-bottom:.9rem}
+.macro div{display:flex;justify-content:space-between;font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.35rem}
+.macro div span{color:var(--muted);font-weight:600}
+.bar{height:8px;border-radius:99px;background:#262626;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:inherit;background:var(--acc)}
+.meal{display:flex;justify-content:space-between;padding:.7rem 0;border-top:1px dashed #2a2a2a;font-size:.9rem}
+.meal:first-of-type{margin-top:1rem}
+.meal span{color:var(--muted)}
+.meal b{color:var(--ink);font-weight:700}
+.wk{margin-top:1rem;display:flex;align-items:center;gap:.6rem;background:#0f0f0f;border:1px solid #232323;border-radius:14px;padding:.8rem 1rem;font-size:.86rem}
+.wk svg{color:var(--acc)}
+
+/* Franja */
+.strip{border-block:1px solid var(--line);background:var(--bg2)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:1.8rem 1rem;text-align:center}
+.strip div+div{border-left:1px solid var(--line)}
+.strip b{display:block;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);font-weight:900;letter-spacing:-.03em}
+.strip span{font-size:.88rem;color:var(--muted)}
+
+/* Secciones */
+.sec{padding:clamp(80px,11vw,130px) 0}
+.sec.alt{background:var(--bg2)}
+.head{max-width:700px;margin:0 auto 3.4rem;text-align:center}
+.head p{color:var(--muted);font-size:1.08rem}
+.eye{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:.9rem}
+
+/* Problema */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.8rem}
+.pain .x{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#2a1414;color:#f87171;margin-bottom:1rem}
+.pain p{color:var(--muted);margin:0}
+
+/* Incluye */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:2rem;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-5px);border-color:#3a3a3a}
+.ic{width:52px;height:52px;border-radius:14px;background:rgba(198,244,50,.12);color:var(--acc);display:grid;place-items:center;margin-bottom:1.2rem}
+.ic svg{width:25px;height:25px}
+.card p{color:var(--muted);margin:0}
+
+/* Objetivos */
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.goal{border-radius:22px;padding:2.2rem;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}
+.goal .n{font-size:.78rem;font-weight:800;color:var(--acc);letter-spacing:.1em;text-transform:uppercase}
+.goal h3{font-size:1.6rem;margin:.6rem 0 .8rem}
+.goal p{color:var(--muted);margin:0}
+.goal::after{content:"";position:absolute;right:-50px;bottom:-50px;width:160px;height:160px;border-radius:50%;border:28px solid rgba(198,244,50,.06)}
+
+/* Proceso */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:s}
+.step{counter-increment:s;padding:1.8rem;border-radius:var(--r);border:1px solid var(--line);background:var(--bg)}
+.step::before{content:counter(s,decimal-leading-zero);display:block;font-size:2.4rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--acc);line-height:1;margin-bottom:1rem}
+.step p{color:var(--muted);margin:0;font-size:.95rem}
+
+/* Sobre mí */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.photo{aspect-ratio:4/5;border-radius:26px;background:linear-gradient(160deg,#1d1d1d,#0f0f0f);border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .ph{font-size:8rem;font-weight:900;color:#1f1f1f;letter-spacing:-.05em;-webkit-text-stroke:2px #2c2c2c}
+.photo .badge{position:absolute;left:18px;bottom:18px;background:var(--acc);color:var(--acc-ink);font-weight:800;font-size:.85rem;padding:.55rem .9rem;border-radius:12px}
+.checks{list-style:none;padding:0;margin:1.6rem 0 2rem;display:grid;gap:.85rem}
+.checks li{display:flex;gap:.75rem;align-items:flex-start;color:var(--ink);font-weight:600}
+.checks svg{background:var(--acc);color:var(--acc-ink);border-radius:50%;padding:4px;width:24px;height:24px;stroke-width:3.2}
+
+/* Precio */
+.price{max-width:560px;margin:0 auto;background:linear-gradient(180deg,#1b1b1b,#131313);border:1px solid #2f2f2f;border-radius:28px;padding:clamp(2rem,5vw,3rem);position:relative;box-shadow:0 40px 80px -40px rgba(198,244,50,.25)}
+.price .top{position:absolute;top:-14px;left:50%;translate:-50% 0;background:var(--acc);color:var(--acc-ink);font-weight:800;font-size:.75rem;padding:.35rem 1rem;border-radius:99px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.amount{display:flex;align-items:baseline;gap:.4rem;margin:.8rem 0 .3rem}
+.amount b{font-size:clamp(3rem,8vw,4.2rem);font-weight:900;color:var(--ink);letter-spacing:-.04em;line-height:1}
+.amount span{color:var(--muted);font-weight:700;font-size:1.1rem}
+.price .sub{color:var(--muted);margin-bottom:1.6rem}
+.price ul{list-style:none;padding:0;margin:0 0 2rem;display:grid;gap:.8rem}
+.price li{display:flex;gap:.7rem;align-items:flex-start;color:var(--ink)}
+.price li svg{color:var(--acc);margin-top:.15rem;stroke-width:3}
+.note{text-align:center;color:var(--muted);font-size:.9rem;margin:1.2rem 0 0}
+
+/* FAQ */
+.faq{display:grid;gap:.8rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 1.4rem}
+.faq details[open]{border-color:#3a3a3a}
+.faq summary{list-style:none;cursor:pointer;padding:1.25rem 0;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--acc);font-size:1.6rem;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding-bottom:1.25rem;margin:0}
+
+/* Formulario */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.contact .big{font-size:1.1rem;color:#b5b5b5}
+.wa-card{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.4rem;margin-top:1.6rem;transition:border-color .2s}
+.wa-card:hover{border-color:#25d366}
+.wa-card .i{width:48px;height:48px;border-radius:14px;background:#25d366;color:#fff;display:grid;place-items:center}
+.wa-card .i svg{width:26px;height:26px;stroke:none;fill:currentColor}
+.wa-card b{color:var(--ink);display:block}
+.wa-card span{color:var(--muted);font-size:.92rem}
+.form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(1.5rem,4vw,2.4rem)}
+.form h3{font-size:1.4rem}
+.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field label{font-size:.88rem;font-weight:700;color:var(--ink)}
+.field input,.field select,.field textarea{font:inherit;color:var(--ink);background:#0f0f0f;border:1.5px solid #2a2a2a;border-radius:12px;padding:.85rem 1rem;width:100%;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 4px rgba(198,244,50,.12)}
+.field .bad{border-color:#ef4444}
+.form small{display:block;color:var(--muted);text-align:center;margin-top:.9rem;font-size:.85rem}
+.status{color:#f87171;text-align:center;font-weight:600;min-height:1.4em;margin:.6rem 0 0}
+
+/* CTA final */
+.cta{padding:clamp(70px,9vw,110px) 0;text-align:center;background:var(--acc);color:var(--acc-ink)}
+.cta h2{color:var(--acc-ink);max-width:760px;margin-inline:auto}
+.cta p{font-size:1.1rem;opacity:.75;margin-bottom:2rem}
+.btn-dark{background:var(--acc-ink);color:var(--acc)}
+.btn-dark:hover{background:#1a1a1a}
+
+/* Footer */
+footer{padding:2.6rem 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+footer nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+footer a:hover{color:var(--ink)}
+
+/* WhatsApp flotante */
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:30px;height:30px;stroke:none;fill:currentColor}
+
+/* Modal */
+dialog{border:1px solid var(--line);border-radius:20px;padding:2rem;max-width:560px;width:calc(100% - 32px);background:var(--card);color:var(--text)}
+dialog::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
+dialog h3{margin-bottom:1rem}
+
+/* Animación */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .plan-ui{max-width:440px;transform:none}
+  .grid,.pains,.goals{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .photo{max-width:420px}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  .nav{position:fixed;inset:var(--h) 0 auto;background:#0a0a0a;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:.8rem 20px 1.5rem;transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  .hdr.open{background:#0a0a0a}
+  .hdr.open .nav{transform:none}
+  .nav a:not(.btn){padding:.95rem 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  .nav .btn{margin-top:1rem}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div:nth-child(3){border-left:0}
+  .strip div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .grid,.pains,.goals,.steps{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:0}
+  .actions .btn{flex:1}
+  .hero{padding-top:calc(var(--h) + 40px)}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#inicio" class="logo"><b>O</b><span>Omar Elhadri<small>Coaching nutricional</small></span></a>
+    <nav class="nav" id="nav">
+      <a href="#metodo">Método</a>
+      <a href="#incluye">Qué incluye</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#precio">Precio</a>
+      <a href="#faq">FAQ</a>
+      <a href="#empezar" class="btn btn-acc btn-sm">Quiero empezar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag"><i></i>Coaching 1:1 · Plazas limitadas</span>
+      <h1>Come con un plan.<br><span class="hl">Ve resultados.</span></h1>
+      <p class="lead">Coaching nutricional 1:1 durante 3 meses. Te calculo tus macros, te preparo un menú a medida, al gramo, y te acompaño cada semana para ajustar hasta que llegues a tu objetivo.</p>
+      <div class="actions">
+        <a class="btn btn-acc btn-lg" href="#empezar">Quiero empezar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line btn-lg wa" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+      </div>
+      <ul class="mini">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Plan 100% personalizado</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Revisión semanal</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Contacto directo por WhatsApp</li>
+      </ul>
+    </div>
+
+    <div class="plan-ui rv" aria-hidden="true">
+      <header><strong>Tu plan · Semana 4</strong><span class="chip">Recomposición</span></header>
+      <div class="kcal"><b>2.350</b><span>kcal / día</span></div>
+      <div class="macro"><div>Proteína <span>150 g</span></div><div class="bar"><i style="width:78%"></i></div></div>
+      <div class="macro"><div>Carbohidratos <span>265 g</span></div><div class="bar"><i style="width:64%"></i></div></div>
+      <div class="macro"><div>Grasas <span>70 g</span></div><div class="bar"><i style="width:46%"></i></div></div>
+      <div class="meal"><span>Desayuno</span><b>Avena 80 g · Yogur 250 g</b></div>
+      <div class="meal"><span>Comida</span><b>Arroz 100 g · Pollo 180 g</b></div>
+      <div class="meal"><span>Cena</span><b>Patata 300 g · Salmón 150 g</b></div>
+      <div class="wk"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Revisión del jueves: −0,4 kg de media semanal ✔</div>
+    </div>
+  </div>
+</section>
+
+<!-- FRANJA -->
+<section class="strip">
+  <div class="wrap">
+    <div><b>1:1</b><span>trato personal, sin plantillas</span></div>
+    <div><b>3 meses</b><span>de acompañamiento</span></div>
+    <div><b>Semanal</b><span>revisión y ajustes</span></div>
+    <div><b>Al gramo</b><span>menús fáciles de seguir</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eye">¿Te suena?</span>
+      <h2>Entrenas, pero tu cuerpo no cambia</h2>
+      <p>El entreno es la mitad. Sin una alimentación ajustada a ti, es muy difícil ver progreso.</p>
+    </div>
+    <div class="pains">
+      <div class="pain rv"><div class="x"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></div><h3>Dietas genéricas</h3><p>Copias planes de internet que no tienen en cuenta tu peso, tu horario ni tu objetivo.</p></div>
+      <div class="pain rv"><div class="x"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></div><h3>No sabes cuánto comer</h3><p>Calorías, proteína, raciones… acabas comiendo "a ojo" y sin saber si vas bien.</p></div>
+      <div class="pain rv"><div class="x"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></div><h3>Lo dejas a las semanas</h3><p>Sin nadie que te revise y te ajuste el plan, es fácil perder la constancia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJETIVOS / MÉTODO -->
+<section class="sec alt" id="metodo">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eye">Método</span>
+      <h2>Un plan para tu objetivo</h2>
+      <p>Calculo tus necesidades a partir de tus datos reales y ajusto cada semana según tu progreso.</p>
+    </div>
+    <div class="goals">
+      <div class="goal rv"><span class="n">Objetivo 01</span><h3>Perder grasa</h3><p>Déficit calórico controlado y proteína alta para bajar grasa sin perder músculo ni pasar hambre.</p></div>
+      <div class="goal rv"><span class="n">Objetivo 02</span><h3>Ganar músculo</h3><p>Superávit ligero y bien medido para ganar masa muscular minimizando la grasa.</p></div>
+      <div class="goal rv"><span class="n">Objetivo 03</span><h3>Recomposición</h3><p>Perder grasa y ganar músculo a la vez, ideal si estás empezando o vuelves a entrenar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="sec" id="incluye">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eye">Qué incluye</span>
+      <h2>Todo lo que necesitas para cambiar tu físico</h2>
+    </div>
+    <div class="grid">
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><h3>Macros calculados para ti</h3><p>Calorías, proteína, carbohidratos y grasas según tu peso, tu actividad y tu objetivo.</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div><h3>Menú a medida, al gramo</h3><p>Comidas con cantidades exactas en gramos. Sin "al gusto" ni "1 pieza": sabes exactamente qué comer.</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Revisión semanal</h3><p>Cada semana revisamos tu peso medio y tus sensaciones, y ajustamos el plan si hace falta.</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Contacto por WhatsApp</h3><p>Me escribes directamente para dudas, cambios de comida o cuando necesites un empujón.</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6.5 6.5h11M6.5 17.5h11M3 9v6M21 9v6M6.5 6.5v11M17.5 6.5v11"/></svg></div><h3>Rutina de entreno</h3><p>Trabajo junto a un preparador físico que se encarga de tu rutina, para que nutrición y entreno vayan a una.</p></div>
+      <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Hábitos que se quedan</h3><p>Aprendes a comer bien para que, al terminar los 3 meses, sepas mantener los resultados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eye">Cómo funciona</span>
+      <h2>Empezar es muy fácil</h2>
+    </div>
+    <ol class="steps">
+      <li class="step rv"><h3>Me escribes</h3><p>Rellena el formulario o mándame un WhatsApp con tu objetivo.</p></li>
+      <li class="step rv"><h3>Valoración</h3><p>Te pido tus datos: peso, altura, edad, actividad, horarios y comidas que te gustan.</p></li>
+      <li class="step rv"><h3>Tu plan</h3><p>Recibes tus macros y tu menú personalizado, listo para empezar.</p></li>
+      <li class="step rv"><h3>Seguimiento</h3><p>Revisión cada semana y ajustes durante los 3 meses del programa.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="sec" id="sobre-mi">
+  <div class="wrap about">
+    <div class="photo rv">
+      <!-- Para poner tu foto: sube "omar.jpg" junto a este archivo y cambia la línea de abajo por: <img src="omar.jpg" alt="Omar Elhadri"> -->
+      <span class="ph">OE</span>
+      <span class="badge">Atleta patrocinado por Zumub</span>
+    </div>
+    <div class="rv">
+      <span class="eye">Sobre mí</span>
+      <h2>Hola, soy Omar</h2>
+      <p class="big" style="font-size:1.08rem">El fitness es mi día a día: entreno, creo contenido y ayudo a otras personas a conseguir el físico que buscan. Sé lo que cuesta ser constante, por eso mi forma de trabajar es cercana, clara y adaptada a tu vida real.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Planes hechos a mano para cada persona</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cantidades exactas, fáciles de seguir</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Seguimiento real, no un PDF y adiós</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Trabajo en equipo con un preparador físico</li>
+      </ul>
+      <a href="#empezar" class="btn btn-acc">Hablemos</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section class="sec alt" id="precio">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eye">Precio</span>
+      <h2>Un programa, todo incluido</h2>
+      <p>Sin permanencias raras ni letra pequeña.</p>
+    </div>
+    <div class="price rv">
+      <span class="top">Programa de 3 meses</span>
+      <h3>Coaching nutricional 1:1</h3>
+      <div class="amount"><b>200€</b><span>/ mes</span></div>
+      <p class="sub">Duración: 3 meses de acompañamiento.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cálculo de calorías y macros personalizado</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Menú a medida con cantidades en gramos</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Revisión semanal y ajustes del plan</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rutina de entreno con preparador físico</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Contacto directo por WhatsApp</li>
+      </ul>
+      <a href="#empezar" class="btn btn-acc btn-block btn-lg">Reservar mi plaza</a>
+      <p class="note">Trabajo con pocos clientes a la vez para dar un seguimiento de calidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="narrow">
+    <div class="head rv">
+      <span class="eye">Preguntas frecuentes</span>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Es online o presencial?</summary><p>Es online: te envío tu plan y hacemos el seguimiento por WhatsApp, así que puedes estar en cualquier sitio.</p></details>
+      <details><summary>¿Tengo que pesar la comida?</summary><p>Sí, al principio te recomiendo una báscula de cocina. Los menús van en gramos para que sepas exactamente qué comer, y con el tiempo aprenderás a calcularlo a ojo.</p></details>
+      <details><summary>¿Puedo comer lo que me gusta?</summary><p>Sí. Antes de hacer tu plan te pregunto qué comidas te gustan, cuáles no, y tus horarios. El plan se adapta a ti, no al revés.</p></details>
+      <details><summary>¿Cómo son las revisiones semanales?</summary><p>Te pesas varios días de la semana y usamos la media semanal (es mucho más fiable que un solo día). Me envías tus datos y sensaciones y ajustamos lo necesario.</p></details>
+      <details><summary>¿Necesito ir al gimnasio?</summary><p>Lo ideal es entrenar, y por eso el programa incluye la rutina del preparador físico con el que trabajo. Se adapta a tu nivel y a los días que puedas entrenar.</p></details>
+      <details><summary>¿Cómo se paga?</summary><p>El programa cuesta 200€ al mes durante 3 meses. Te explico las formas de pago cuando hablemos por WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap rv">
+    <h2>Dentro de 3 meses te alegrarás de haber empezado hoy</h2>
+    <p>Escríbeme y vemos juntos cuál es tu objetivo.</p>
+    <a class="btn btn-dark btn-lg wa" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="sec" id="empezar">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="eye">Empieza hoy</span>
+      <h2>Cuéntame tu objetivo</h2>
+      <p class="big">Rellena el formulario y se abrirá WhatsApp con tu mensaje ya escrito. Te respondo lo antes posible.</p>
+      <a class="wa-card wa" target="_blank" rel="noopener">
+        <span class="i"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.2-.7-.4z"/></svg></span>
+        <span><b>Prefiero escribir directamente</b><span>+34 613 018 822</span></span>
+      </a>
+    </div>
+
+    <form class="form rv" id="form" novalidate>
+      <h3>Solicitar información</h3>
+      <div class="row">
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" required autocomplete="given-name" /></div>
+        <div class="field"><label for="edad">Edad</label><input id="edad" name="edad" type="number" min="14" max="99" inputmode="numeric" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="peso">Peso (kg)</label><input id="peso" name="peso" type="number" step="0.1" inputmode="decimal" /></div>
+        <div class="field"><label for="altura">Altura (cm)</label><input id="altura" name="altura" type="number" inputmode="numeric" /></div>
+      </div>
+      <div class="field"><label for="objetivo">Objetivo</label>
+        <select id="objetivo" name="objetivo" required>
+          <option value="">Selecciona tu objetivo</option>
+          <option>Perder grasa</option><option>Ganar músculo</option><option>Recomposición corporal</option><option>Mejorar mi alimentación</option>
+        </select>
+      </div>
+      <div class="field"><label for="entreno">¿Cuántos días entrenas?</label>
+        <select id="entreno" name="entreno">
+          <option value="">Selecciona</option><option>No entreno todavía</option><option>1–2 días</option><option>3–4 días</option><option>5 o más días</option>
+        </select>
+      </div>
+      <div class="field"><label for="msg">Algo más que deba saber</label><textarea id="msg" name="msg" rows="3" placeholder="Horarios, comidas que no te gustan, alergias…"></textarea></div>
+      <button class="btn btn-acc btn-block btn-lg" type="submit">Enviar por WhatsApp</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <small>Tus datos solo se usan para responderte. <a href="#" id="open-legal" style="text-decoration:underline">Privacidad</a></small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Omar Elhadri · Coaching nutricional</span>
+    <nav><a href="#metodo">Método</a><a href="#precio">Precio</a><a href="#faq">FAQ</a><a href="#" id="open-legal-2">Aviso legal</a></nav>
+  </div>
+</footer>
+
+<a class="fab wa" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.2-.7-.4z"/></svg></a>
+
+<dialog id="legal">
+  <h3>Aviso legal y privacidad</h3>
+  <p><strong>Responsable:</strong> Omar Elhadri Barrera · Contacto: WhatsApp +34 613 018 822.</p>
+  <p><strong>Finalidad:</strong> responder a tus consultas sobre el servicio de coaching. Los datos que envías por el formulario llegan directamente por WhatsApp y no se guardan en esta web.</p>
+  <p><strong>Derechos:</strong> puedes pedir el acceso o la eliminación de tus datos escribiendo al mismo número.</p>
+  <p style="color:var(--muted);font-size:.9rem">El coaching nutricional es un servicio de acompañamiento y educación en hábitos. No sustituye el consejo de un médico o dietista-nutricionista colegiado en caso de patologías.</p>
+  <form method="dialog"><button class="btn btn-acc">Cerrar</button></form>
+</dialog>
+
+<script>
+(function(){
+  const WA = "34613018822";
+  const waLink = (t) => "https://wa.me/" + WA + "?text=" + encodeURIComponent(t);
+  document.querySelectorAll("a.wa").forEach(a => a.href = waLink("Hola Omar, me interesa el coaching nutricional. ¿Me das más información?"));
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  const hdr = document.getElementById("hdr");
+  const onS = () => hdr.classList.toggle("scrolled", scrollY > 20);
+  onS(); addEventListener("scroll", onS, {passive:true});
+
+  const burger = document.getElementById("burger");
+  burger.addEventListener("click", () => { const o = hdr.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+  document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => { hdr.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+  const legal = document.getElementById("legal");
+  ["open-legal","open-legal-2"].forEach(id => document.getElementById(id).addEventListener("click", e => { e.preventDefault(); legal.showModal(); }));
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+  const form = document.getElementById("form"), st = document.getElementById("status");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll("[required]").forEach(f => { const bad = !f.value.trim(); f.classList.toggle("bad", bad); if (bad) ok = false; });
+    if (!ok) { st.textContent = "Rellena tu nombre y tu objetivo."; return; }
+    st.textContent = "";
+    const d = Object.fromEntries(new FormData(form));
+    const lines = [
+      "Hola Omar, quiero información sobre el coaching nutricional.",
+      "",
+      "Nombre: " + d.nombre,
+      d.edad ? "Edad: " + d.edad : "",
+      d.peso ? "Peso: " + d.peso + " kg" : "",
+      d.altura ? "Altura: " + d.altura + " cm" : "",
+      "Objetivo: " + d.objetivo,
+      d.entreno ? "Entreno: " + d.entreno : "",
+      d.msg ? "Otros: " + d.msg : ""
+    ].filter((l, i) => l !== "" || i === 1);
+    window.open(waLink(lines.join("\n")), "_blank");
+  });
+})();
+</script>
+</body>
+</html>
