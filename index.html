@@ -160,6 +160,10 @@ svg{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2.2;stro
 .checks li{display:flex;gap:.65rem;align-items:flex-start;color:var(--ink);font-weight:600;font-size:.95rem}
 .checks svg{background:var(--acc);color:#fff;border-radius:50%;padding:4px;width:22px;height:22px;stroke-width:3.2;margin-top:.05rem}
 .team-cta{text-align:center;margin-top:2.6rem}
+.study{display:flex;gap:.8rem;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;margin:.2rem 0 1.1rem}
+.study svg{width:34px;height:34px;padding:7px;border-radius:10px;background:var(--acc-soft);color:var(--acc)}
+.study b{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.study span{color:var(--ink);font-weight:700}
 
 /* Precio */
 .price{max-width:560px;margin:0 auto;background:var(--card);border:2px solid var(--acc);border-radius:28px;padding:clamp(2rem,5vw,3rem);position:relative;box-shadow:0 40px 70px -40px rgba(232,98,44,.45)}
@@ -369,15 +373,15 @@ dialog h3{margin-bottom:1rem}
     <div class="rv">
       <span class="tag"><i></i>Programa 1:1 de 3 meses · Nutrición + entreno</span>
       <h1>Come bien. Entrena bien.<br><span class="hl">Ve resultados.</span></h1>
-      <p class="lead">Un equipo de dos para ti: yo me encargo de tu nutrición, con macros y menú al gramo, y un <strong>preparador físico titulado</strong> diseña tu rutina de entreno. Durante 3 meses revisamos tu progreso cada semana y ajustamos lo que haga falta.</p>
+      <p class="lead">Un equipo de dos para ti: yo me encargo de tu alimentación, con macros y menú al gramo, y <strong>Adam, preparador físico titulado</strong>, diseña tu rutina de entreno. Durante 3 meses revisamos tu progreso cada semana y ajustamos lo que haga falta.</p>
       <div class="actions">
         <a class="btn btn-acc btn-lg" href="#empezar">Quiero empezar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line btn-lg wa" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
       </div>
       <a class="team-strip" href="#equipo">
-        <div class="member"><span class="av">OE<img src="omar.jpg" alt="" onerror="this.remove()"></span><div><b>Omar Elhadri</b><span>Nutrición y seguimiento</span></div></div>
+        <div class="member"><span class="av">OE<img src="omar.jpg" alt="" onerror="this.remove()"></span><div><b>Omar Elhadri</b><span>Alimentación y seguimiento</span></div></div>
         <span class="plus">+</span>
-        <div class="member"><span class="av">PF<img src="preparador.jpg" alt="" onerror="this.remove()"></span><div><b>Preparador físico titulado</b><span>Rutina de entreno</span></div></div>
+        <div class="member"><span class="av">A<img src="adam.jpg" alt="" onerror="this.remove()"></span><div><b>Adam</b><span>Preparador físico titulado</span></div></div>
       </a>
     </div>
 
@@ -428,7 +432,7 @@ dialog h3{margin-bottom:1rem}
         <ul>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Macros y menú calculados para ti, con cantidades en gramos</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Sabes exactamente qué comer cada día</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rutina de un preparador físico titulado, coordinada con tu dieta</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rutina de Adam, preparador físico titulado, coordinada con tu dieta</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Revisión cada semana durante 3 meses: alguien pendiente de ti</li>
         </ul>
       </div>
@@ -471,12 +475,12 @@ dialog h3{margin-bottom:1rem}
 </section>
 
 <!-- EQUIPO -->
-<!-- FOTOS: sube "omar.jpg" y "preparador.jpg" al repositorio, junto a index.html, y aparecerán solas aquí y arriba del todo. -->
+<!-- FOTOS: sube "omar.jpg" y "adam.jpg" al repositorio, junto a index.html, y aparecerán solas aquí y arriba del todo. -->
 <section class="sec" id="equipo">
   <div class="wrap">
     <div class="head rv">
       <span class="eye">El equipo</span>
-      <h2>Dos especialistas, un mismo objetivo: el tuyo</h2>
+      <h2>Un equipo de dos, un mismo objetivo: <span class="hl">el tuyo</span></h2>
       <p>Nutrición y entreno trabajando juntos, para que todo vaya en la misma dirección.</p>
     </div>
     <div class="team">
@@ -487,9 +491,9 @@ dialog h3{margin-bottom:1rem}
           <span class="badge"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Atleta patrocinado por Zumub</span>
         </div>
         <div class="pro-body">
-          <span class="role">Nutrición</span>
+          <span class="role">Alimentación y seguimiento</span>
           <h3>Omar Elhadri</h3>
-          <p>El fitness es mi día a día: entreno, creo contenido y ayudo a otras personas a conseguir el físico que buscan. Sé lo que cuesta ser constante, por eso trabajo de forma cercana, clara y adaptada a tu vida real.</p>
+          <p>El fitness es mi día a día: entreno, soy atleta patrocinado por Zumub y comparto lo que aprendo con mi comunidad. Me encargo de que sepas qué comer cada día y de revisar tu progreso semana a semana. Sé lo que cuesta ser constante, por eso trabajo de forma cercana, clara y adaptada a tu vida real.</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Macros y menú hechos a mano para ti</li>
             <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Cantidades exactas, fáciles de seguir</li>
@@ -499,18 +503,20 @@ dialog h3{margin-bottom:1rem}
       </article>
       <article class="pro rv">
         <div class="photo">
-          <span class="ph">PF</span>
-          <img src="preparador.jpg" alt="Preparador físico" onerror="this.remove()">
+          <span class="ph">A</span>
+          <img src="adam.jpg" alt="Adam, preparador físico" onerror="this.remove()">
           <span class="badge"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>Preparador físico titulado</span>
         </div>
         <div class="pro-body">
           <span class="role">Entrenamiento</span>
-          <h3>Preparador físico titulado</h3>
-          <p>Se encarga de diseñar tu rutina según tu nivel, tus objetivos y los días que puedas entrenar, para que el entreno y la alimentación vayan a una.</p>
+          <h3>Adam</h3>
+          <p>Preparador físico con formación oficial. Diseña tu rutina a partir de tu nivel, tu objetivo y los días que puedes entrenar, con una progresión planificada para que mejores semana a semana y entrenes con buena técnica. Trabaja junto a Omar para que entreno y alimentación vayan a una.</p>
+          <!-- Pon aquí el nombre exacto de la titulación de Adam (p. ej. el ciclo o grado que tenga) -->
+          <div class="study"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><div><b>Formación</b><span>Titulado en preparación física</span></div></div>
           <ul class="checks">
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rutina adaptada a tu nivel</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Progresión pensada para tu objetivo</li>
-            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Formación oficial en preparación física</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Rutina adaptada a tu nivel y a tu horario</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Progresión planificada hacia tu objetivo</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Ajustes del entreno en cada revisión</li>
           </ul>
         </div>
       </article>
@@ -535,7 +541,7 @@ dialog h3{margin-bottom:1rem}
         <ul class="inc">
           <li><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg><span>Macros calculados para ti<small>Según tu peso, actividad y objetivo</small></span></li>
           <li><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg><span>Menú a medida, al gramo<small>Con las comidas que te gustan</small></span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M6.5 6.5h11M6.5 17.5h11M3 9v6M21 9v6M6.5 6.5v11M17.5 6.5v11"/></svg><span>Rutina de entreno<small>Hecha por un preparador físico titulado</small></span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M6.5 6.5h11M6.5 17.5h11M3 9v6M21 9v6M6.5 6.5v11M17.5 6.5v11"/></svg><span>Rutina de entreno<small>Hecha por Adam, preparador físico titulado</small></span></li>
           <li><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Revisión semanal<small>Y ajustes del plan cuando haga falta</small></span></li>
           <li><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Contacto por WhatsApp<small>Para dudas y cambios de comida</small></span></li>
           <li><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span>Hábitos que se quedan<small>Para mantener los resultados</small></span></li>
@@ -563,7 +569,8 @@ dialog h3{margin-bottom:1rem}
       <details><summary>¿Tengo que pesar la comida?</summary><p>Sí, al principio te recomiendo una báscula de cocina. Los menús van en gramos para que sepas exactamente qué comer, y con el tiempo aprenderás a calcularlo a ojo.</p></details>
       <details><summary>¿Puedo comer lo que me gusta?</summary><p>Sí. Antes de hacer tu plan te pregunto qué comidas te gustan, cuáles no, y tus horarios. El plan se adapta a ti, no al revés.</p></details>
       <details><summary>¿Cómo son las revisiones semanales?</summary><p>Te pesas varios días de la semana y usamos la media semanal (es mucho más fiable que un solo día). Me envías tus datos y sensaciones y ajustamos lo necesario.</p></details>
-      <details><summary>¿Necesito ir al gimnasio?</summary><p>Lo ideal es entrenar. Un preparador físico titulado te diseña la rutina adaptada a tu nivel y a los días que puedas entrenar.</p></details>
+      <details><summary>¿Necesito ir al gimnasio?</summary><p>Lo ideal es entrenar. Adam, nuestro preparador físico titulado, te diseña la rutina adaptada a tu nivel y a los días que puedas entrenar.</p></details>
+      <details><summary>¿Sois nutricionistas?</summary><p>No. Omar no es dietista-nutricionista: es un coach que te acompaña con la alimentación y el seguimiento, a partir de su experiencia en el mundo del fitness. La parte de entrenamiento la lleva Adam, preparador físico titulado. Si tienes alguna patología, estás embarazada o tienes una relación difícil con la comida, consulta antes con tu médico o con un dietista-nutricionista colegiado.</p></details>
       <details><summary>¿Cuánto dura el programa?</summary><p>3 meses. Es el tiempo que hace falta para ver cambios reales y, sobre todo, para que aprendas a mantenerlos cuando terminemos.</p></details>
       <details><summary>¿Cuánto cuesta?</summary><p>Escríbeme por WhatsApp y te lo cuento. Antes prefiero conocer tu objetivo y tu situación para explicarte bien cómo trabajaríamos contigo.</p></details>
       <details><summary>¿En cuánto tiempo veré resultados?</summary><p>Depende de dónde partas y de tu constancia. En las primeras semanas notarás que comes con más orden y tienes más energía; los cambios físicos visibles llegan semana a semana si sigues el plan. No vendemos milagros: vendemos un método que funciona y alguien que te acompaña para que lo cumplas.</p></details>
@@ -625,7 +632,7 @@ dialog h3{margin-bottom:1rem}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="y"></span> Omar Elhadri · Coaching nutricional</span>
+    <span>© <span id="y"></span> Omar Elhadri · Coaching nutricional<br><small style="font-size:.8rem">Servicio de acompañamiento en hábitos. No sustituye la consulta con un médico o dietista-nutricionista.</small></span>
     <nav><a href="#metodo">Método</a><a href="#programa">Programa</a><a href="#faq">FAQ</a><a href="#" id="open-legal-2">Aviso legal</a></nav>
   </div>
 </footer>
